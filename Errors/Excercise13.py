@@ -1,10 +1,3 @@
-# below is the AI 1.0 code, which works but cannot handle invalid input
-# if the user input something other than an integer at first, the program will break due to a ValueError,
-# caused by calling int() function on an non-integer input result
-#
-# Your task is to use the try-except-else-finally workflow to improve the existing code
-# which can detect an invalid input in the beginning, and prints our an error message: 'Please input integers only.'
-# then proceed to ask the user 'Do you want to play again? (y/N):' like the original function does
 def interact():
     while True:  # keep looping until user reach break statement
         try:
