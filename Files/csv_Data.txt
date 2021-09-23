@@ -1,0 +1,5 @@
+name,age,location,branch
+Suryash,22,Lucknow,CS
+Shivam,23,Lucknow,CE
+Abhinav,21,Sultanpur,EN
+Nikhil,22,Gorakhpur,CS
