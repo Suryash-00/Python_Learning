@@ -11,7 +11,7 @@ Enter:
 Your choice:
 '''
 def menu():
-    #Milestone2json.create_book_table()
+    Milestone2json.create_book_table()
     user_input=input(USER_CHOICE)
     while user_input!='q':
         if user_input=='a':
