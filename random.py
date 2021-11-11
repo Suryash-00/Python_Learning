@@ -1,18 +1,30 @@
-arr=[]
-n = int(input("Enter subjects"))
-for i in range(0, n):
-    ele = int(input("Enter marks"))
-    arr.append(ele)
-for i in range(0, n):
-    for j in range(0, n - i - 1):
-        if arr[j] > arr[j + 1]:
-            temp = arr[j]
-            arr[j] = arr[j + 1]
-            arr[j + 1] = temp
+if __name__ == '__main__':
+    students = []
+    for _ in range(int(input())):
+        name = str(input())
+        score = float(input())
 
-while n != 0:
-    i = 1
-    n = n - 1
-    if arr[n - i] < arr[n]:
-        print(arr[n - i])
-        break
+        students.append([name, score])
+
+        list1 = []
+        list2 = []
+
+        for student in students:
+            list1.append(student[1])
+
+        for a in list1:
+            if list1[a] > list1[a + 1]:
+                temp = list1[a]
+                list1[a] = list1[a + 1]
+                list1[a + 1] = temp
+
+        z = min(list1)
+
+        while min(list1) == z:
+            list1.remove(min(list1))
+
+        for student in students:
+            if student[1] == min(list1):
+                list2.append(student[0])
+
+        print(list2.sort())
