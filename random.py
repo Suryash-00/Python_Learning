@@ -1,30 +1,27 @@
-if __name__ == '__main__':
-    students = []
-    for _ in range(int(input())):
-        name = str(input())
-        score = float(input())
+from collections import defaultdict, OrderedDict, namedtuple, deque
 
-        students.append([name, score])
 
-        list1 = []
-        list2 = []
+def task1() -> defaultdict:
+    dd = defaultdict(lambda: 'Unknown')
+    dd['Alan'] = 'Manchester'
+    return dd
 
-        for student in students:
-            list1.append(student[1])
 
-        for a in list1:
-            if list1[a] > list1[a + 1]:
-                temp = list1[a]
-                list1[a] = list1[a + 1]
-                list1[a + 1] = temp
+def task2(arg_od: OrderedDict):
+    arg_od.popitem()
+    arg_od.popitem(False)
+    # remember to remove start and end before moving Bob and Dan, otherwise they will be removed instead
+    arg_od.move_to_end('Bob')
+    arg_od.move_to_end('Dan', False)
 
-        z = min(list1)
 
-        while min(list1) == z:
-            list1.remove(min(list1))
+def task3(name: str, club: str) -> namedtuple:
+    Player = namedtuple('Player', ['name', 'club'])
+    player = Player(name, club)
+    return player
 
-        for student in students:
-            if student[1] == min(list1):
-                list2.append(student[0])
 
-        print(list2.sort())
+def task4(arg_deque: deque):
+    arg_deque.pop()  # remove last element
+    arg_deque.append(arg_deque.popleft())  # remove first element and append it to last
+    arg_deque.appendleft('Zack')  # add Zack to start
