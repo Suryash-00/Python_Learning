@@ -1,0 +1,3 @@
+2021-12-16 16:03:12,269 INFO     logs.py: 7 This will not show as default
+2021-12-16 16:03:12,269 WARNING  logs.py: 8 This will show as default
+2021-12-16 16:03:12,269 ERROR    logs.py: 9 There's an error!
