@@ -1,4 +1,4 @@
-import random
+import misc_random
 lottery_numbers = set(random.sample(range(22), 6))
 players = [
     {"name": "Rolf", "numbers": {1, 3, 5, 7, 9, 11}},
