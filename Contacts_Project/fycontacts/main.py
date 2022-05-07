@@ -4,8 +4,8 @@ import sys
 
 from PyQt5.QtWidgets import QApplication
 
-from .database import createConnection
-from .views import Window
+from Contacts_Project.fycontacts.database import createConnection
+from Contacts_Project.fycontacts.views import Window
 
 def main():
     """RP Contacts main function."""

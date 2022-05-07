@@ -16,7 +16,7 @@ from PyQt5.QtWidgets import (
     QWidget,
 )
 
-from model import ContactsModel
+from Contacts_Project.model import ContactsModel
 
 
 class Window(QMainWindow):
